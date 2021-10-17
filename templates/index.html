@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="up">
+                    <img src="{% static 'img/Capture.PNG' %}" />
+                </div>
+                <div class="search">
+                    <input type="text" name="" placeholder=" Tìm kiếm " />
+                    <button>
+                        <img src="{% static 'img/Capture1.PNG' %}" />
+                    </button>
+                </div>
+                <div class ="login">
+                    {% if user.is_authenticated %}   
+                    <a href="{% url 'logout' %}"> Đăng xuất </a>     
+                    {% else %}           
+                    <a href="/users/login/"> Đăng nhập </a>
+                    <a href="/users/signup"> Đăng kí </a>
+                    {% endif %}
+
+                </div>
+            </div>
+            <div class="item__list">
+                
+                {% for s in sp %}
+
+                <div class="new_item">
+                    <img src= "{{ s.img.url }}" />
+                    <div class="content">
+                        {{ s.sanpham }}<br />
+                        {{ s.gia }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class = "footer">
+                <div class="noi-dung">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>Thời gian là miễn phí nhưng nó vô giá. Bạn không thể sở hữu nó, nhưng bạn có thể sử dụng nó.<br>
+                       Bạn có thể dùng nó, nhưng bạn không thể giữ nó.<br>
+                       Một khi bạn làm mất nó, bạn sẽ không thể nào có lại được nó.</p>
+                </div>
+                <div class="noi-dung">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>Thời gian là miễn phí nhưng nó vô giá. Bạn không thể sở hữu nó, nhưng bạn có thể sử dụng nó.<br>
+                       Bạn có thể dùng nó, nhưng bạn không thể giữ nó.<br>
+                       Một khi bạn làm mất nó, bạn sẽ không thể nào có lại được nó.</p>
+                </div>
+                <div class="noi-dung">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>Thời gian là miễn phí nhưng nó vô giá. Bạn không thể sở hữu nó, nhưng bạn có thể sử dụng nó.<br>
+                       Bạn có thể dùng nó, nhưng bạn không thể giữ nó.<br>
+                       Một khi bạn làm mất nó, bạn sẽ không thể nào có lại được nó.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

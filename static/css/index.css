@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+.container {
+    width: 100%;
+    height: 30px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+    align-items: center;
+}
+.up {
+    padding-left: 50px;
+}
+.login {
+    padding-right: 50px;
+}
+.login a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    padding-left: 10px;
+}
+.search {
+    display: flex;
+    height: 30px;
+    margin-right: 50px;
+    width: 40%;
+    height: 40px;
+}
+.search input {
+    flex: 1;
+    font-size: 18px;
+    padding: 0 10px;
+    margin-right: 5px;
+}
+.search img {
+    width: 30px;
+    height: 28px;
+}
+.search button {
+    padding: 0 10px;
+}
+.item__list {
+    padding: 30px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.new_item {
+    margin-left: 30px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+}
+.new_item img {
+    width: 200px;
+}
+.footer {
+    background-color: orange;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.noi-dung {
+    margin-bottom: 30px;
+    /* width: 40%; */
+    width: 30%;
+}
+.noi-dung h2 {
+    position: relative;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+.noi-dung h2:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: #f00;
+}
+.noi-dung p {
+    color: black;
+    font-size: 1.5rem;
+}
